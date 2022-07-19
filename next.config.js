@@ -5,12 +5,12 @@ module.exports = {
   analyticsId: '7vsHWbYwcKpA3lFTng2Qe9iNzE7',
   env: {
     siteTitle: "The Kreamer Collection NFT Minting Dapp",
-    contractAddress: "0xB621fdFDda960D9007705cE6e56Afa7b8dDF26E4",
+    contractAddress: "0x687b44477f9Cf1b11Ed3D2DB1D6b03D28F0bDFC3",
     infuraID: "045e9c65387a4200aa8559c347fa19a4",
     defaultGas: 125000,//75000,
     mintType : "Pre-Sale", //Pre-Sale Public
     enforceWhitelist : true,
-    ethValue : "0.01",
+    ethValue : "0.14",
     ethWLValue : "0.00",
     debug: false,
     network: 'mainnet',
@@ -23,11 +23,11 @@ module.exports = {
     mainWWW: 'https://thekreamercollection.com/',
     title: 'The Kreamer Collection',
     links : {
-      opensea : "https://opensea.io/collection/stuffy-bunny-nft",
-      discord : "https://discord.com/invite/stuffybunny",
-      twitter : "https://twitter.com/OfficialSB_NFT"
+      opensea : "https://opensea.io/collection/the-kreamer-collection",
+      discord : "",
+      twitter : "https://twitter.com/THEKREAMERCOLL1"
     },
-    maxMint: 5000,
+    maxMint: 3100,
     maxMintCount: 100,
     messagehash: '0x865f293da4a629f00bd8072be6115031c608fa4a13b819fd087811752fc8bb90',
     signatureBytes: '0x4b7715f34823936b045d1e5ca6c295b7f5ecff3d0c158118c71441ed217c3ddb026617ce49dc15781bdb25c8c34ed4a1f4d68df6080f6dd0004511cf05032bf01c',
