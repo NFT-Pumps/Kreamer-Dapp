@@ -41,7 +41,7 @@ const Header = () => {
                     <a
                       className={
                         router.pathname == "/"
-                          ? "text-white nav-link"
+                          ? "text-pink nav-link"
                           : "nav-link"
                       }
                     >
