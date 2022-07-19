@@ -98,7 +98,7 @@ const MintPage = () => {
                 <h3 className="title" style={{ color: "#FFFFFF"}}>
                   { process.env.pageHeader }
                 </h3>
-                <h4 className="subtitle font-light" style={{ color: "#FFFFFF"}}>
+                <h4 className="subtitle font-light" style={{ color: "#741ea1"}}>
                   { process.env.pageText }
                   <br />
                 </h4>
