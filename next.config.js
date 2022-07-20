@@ -16,7 +16,7 @@ module.exports = {
     network: 'mainnet',
     chainId: 1,
     pageHeader : 'THE KREAMER COLLECTION',
-    pageText : '3100 of your favorite flavors taking over the metaverse',
+    pageText : '',
     //mintType: "Whitelist",
     blockExplorerURL: 'https://etherscan.io/',
     www: 'https://thekreamercollection.com/',
