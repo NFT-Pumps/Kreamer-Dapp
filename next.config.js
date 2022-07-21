@@ -21,7 +21,7 @@ module.exports = {
     blockExplorerURL: 'https://etherscan.io/',
     www: 'https://thekreamercollection.com/',
     mainWWW: 'https://thekreamercollection.com/',
-    title: 'THE KREAMER COLLECTION',
+    title: '3100 Flavors',
     links : {
       opensea : "https://opensea.io/collection/the-kreamer-collection",
       discord : "",
