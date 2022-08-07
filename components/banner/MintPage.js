@@ -2,7 +2,7 @@ import React, { useReducer, useState, useEffect } from 'react';
 import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
 import Image from "next/image";
-import bannerimg from "../../assets/images/landingpage/monster.gif";
+import bannerimg from "../../assets/images/landingpage/no gun promo.png";
 import NFTWalletBridge from '../nftWalletBridge'
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
@@ -56,6 +56,15 @@ const MintPage = () => {
     // setNum(0)
   }
 
+  async function BogoMint(props) {
+
+    props.mintType = "Public";
+    if (mintNum > 0 && process.env.enableBogo == true)  {
+      const returnedhash = await walletBridge1.bogoMint(props);
+    }
+    // setNum(0)
+  }
+
   const [formInput, updateFormInput] = useState({
     price: "",
     amount: "1",
@@ -95,11 +104,11 @@ const MintPage = () => {
             {(!currentUseState.isConnected) ?
               <Col lg="6" md="6" className="align-self-center">
                 {(currentUseState.network == "rinkeby") ? <h3 style={{ color: "#fff" }}>DEMO ONLY RINKEBY</h3> : ""}
-                <h3 className="title" style={{ color: "#FFFFFF"}}>
-                  { process.env.pageHeader }
+                <h3 className="title">
+
                 </h3>
-                <h4 className="subtitle font-light" style={{ color: "#ffffff"}}>
-                  { process.env.pageText }
+                <h4 className="subtitle font-light">
+
                   <br />
                 </h4>
                 <a
@@ -109,14 +118,14 @@ const MintPage = () => {
                   Connect Wallet
                 </a>
                 <Link href={process.env.mainWWW}>
-                  <a className="btn btn-md m-t-30  btn-outline-light " style={{ backgroundColor: "#f00279" }}>
+                  <a className="btn btn-md m-t-30  btn-outline-light " style={{ backgroundColor: "#fa0064" }}>
                     Back Home
                   </a>
                 </Link>
               </Col> :
               <Col lg="6" md="6" className="align-self-center">
                 <>
-                  {(currentUseState.isPublicMintIsOpen) ?
+                  {(currentUseState.isPublicMintIsOpen || currentUseState.isBogoMintIsOpen) ?
                     <>
                       <br />
                       <p className="connected" style={{ backgroundColor: "RGB(0,0,0,0.5)", padding: "5px" }}>
@@ -129,54 +138,58 @@ const MintPage = () => {
                         Contract : <strong>{process.env.contractAddress}</strong>
                         <br />
                       </p>
-                      {(process.env.enforceWhitelist == false || currentUseState.xmPower.isWhiteListed == true) ?
-                        <>
-                          <label className="connected">Number to mint (1-{process.env.maxMintCount}):</label>
-                          <div className="">
-                            <div className="input-group">
-                              <div className="input-group-prepend">
-                                <button className="btn btn-outline-primary" type="button" onClick={decNum}>-</button>
-                              </div>
-                              <div className="input-group-prepend">
-                                <input type="number" id="mints" name="mints" className="form-control" value={mintNum} min="1" max={process.env.maxMintCount} onChange={handleChange} />
-                              </div>
-                              <div className="input-group-prepend">
-                                <button className="btn btn-outline-primary" type="button" onClick={incNum}>+</button>
-                              </div>
-                            </div>
+                      <label className="connected">Number to mint (1-{process.env.maxMintCount}):</label>
+                      <div className="">
+                        <div className="input-group">
+                          <div className="input-group-prepend">
+                            <button className="btn btn-outline-primary" type="button" onClick={decNum}>-</button>
                           </div>
+                          <div className="input-group-prepend">
+                            <input type="number" id="mints" name="mints" className="form-control" value={mintNum} min="1" max={process.env.maxMintCount} onChange={handleChange} />
+                          </div>
+                          <div className="input-group-prepend">
+                            <button className="btn btn-outline-primary" type="button" onClick={incNum}>+</button>
+                          </div>
+                        </div>
+                      </div>
+                      {(process.env.enableBogo == false) ?
+                        <>
                           <Link href="">
                             <a className="btn btn-success m-r-20 btn-md m-t-30 btn-outline-dark " onClick={() => SendMint({ mint: mintNum })}>
                               Mint
                             </a>
                           </Link>
                         </>
-                        : <h1 style={{ color: "#FFFFFF"}}>You are not on the whitelist</h1>}
+                        : <Link href="">
+                        <a className="btn btn-success m-r-20 btn-md m-t-30 btn-outline-dark " onClick={() => BogoMint({ mint: mintNum })}>
+                          Bogo Mint
+                        </a>
+                      </Link>}
                       <a
                         onClick={() => walletBridge1.disconnect()}
-                        className="btn btn-md m-t-30 btn-outline-dark" style={{ backgroundColor: "#f00279" }}
+                        className="btn btn-md m-t-30 btn-outline-light "
                       >
                         Disconnect Wallet
                       </a>
                       <br />
                       <br />
-                      <h4 className="subtitle font-light" style={{ color: "#FFFFFF"}}>
+                      <h4 className="subtitle font-light">
                         NFT&apos;s minted {currentUseState.numMinted} of {process.env.maxMint}
                       </h4>
                       <br />
                       {currentUseState.hashHtml}
                     </>
                     :
-                    <h1 className="subtitle font-light" style={{ color: "#FFFFFF"}}>Public mint is currently closed!</h1>
+                    <h1 className="subtitle font-light">Public mint is currently closed!</h1>
                   }
                 </>
               </Col>
             }
-            <Col lg="6" md="6" >
+            {/* <Col lg="6" md="6" >
               <div style={{ paddingTop: "120px", paddingBottom: "100px" }}>
                 <Image src={bannerimg} alt="Monster Window" />
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </div>
