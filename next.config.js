@@ -5,7 +5,7 @@ module.exports = {
   analyticsId: '7vsHWbYwcKpA3lFTng2Qe9iNzE7',
   env: {
     siteTitle: "The Kreamer Collection NFT Minting Dapp",
-    contractAddress: "0x687b44477f9Cf1b11Ed3D2DB1D6b03D28F0bDFC3",
+    contractAddress: "0xC81e9A17a5BAEE1141BA2AC7EEFDbe8f450b60e8",
     infuraID: "045e9c65387a4200aa8559c347fa19a4",
     defaultGas: 125000,//75000,
     mintType : "Pre-Sale", //Pre-Sale Public
