@@ -325,6 +325,36 @@ export default function ContractABI() {
       "inputs":[
          {
             "internalType":"uint256",
+            "name":"quantity",
+            "type":"uint256"
+         }
+      ],
+      "name":"bogoMint",
+      "outputs":[
+         
+      ],
+      "stateMutability":"payable",
+      "type":"function"
+   },
+   {
+      "inputs":[
+         
+      ],
+      "name":"bogoMintIsOpen",
+      "outputs":[
+         {
+            "internalType":"bool",
+            "name":"",
+            "type":"bool"
+         }
+      ],
+      "stateMutability":"view",
+      "type":"function"
+   },
+   {
+      "inputs":[
+         {
+            "internalType":"uint256",
             "name":"tokenId",
             "type":"uint256"
          }
@@ -807,6 +837,11 @@ export default function ContractABI() {
             "internalType":"bool",
             "name":"setPrivateMintState",
             "type":"bool"
+         },
+         {
+            "internalType":"bool",
+            "name":"setBogoMintState",
+            "type":"bool"
          }
       ],
       "name":"setParams",
@@ -973,6 +1008,17 @@ export default function ContractABI() {
          }
       ],
       "name":"teamMint",
+      "outputs":[
+         
+      ],
+      "stateMutability":"nonpayable",
+      "type":"function"
+   },
+   {
+      "inputs":[
+         
+      ],
+      "name":"toggleBogoMint",
       "outputs":[
          
       ],
@@ -1169,7 +1215,7 @@ export default function ContractABI() {
                   "type":"uint8"
                }
             ],
-            "internalType":"struct GenericNFTPumpContract.WhitelistClaimPass",
+            "internalType":"struct TheKreamerCollection.WhitelistClaimPass",
             "name":"whitelistClaimPass",
             "type":"tuple"
          }
