@@ -167,7 +167,7 @@ export default function Claim() {
                               <h1 className="subtitle font-light" style={{ color: "#cc8899"}}>Communicating with the blockchain!</h1>
                             </>}
                         </>
-                        : <h1 className="subtitle font-light" style={{ color: "#cc8899"}}>You are not on the whitelist</h1>
+                        : <h1 className="subtitle font-light" style={{ color: "#cc8899"}}>You are not on the Kreamlist</h1>
                       }
                       <a
                         onClick={() => walletBridge1.disconnect()}
