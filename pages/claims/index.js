@@ -142,7 +142,7 @@ export default function Claim() {
                         <>
                           {(currentUseState.isWaiting == false) ?
                             <>
-                              <label className="connected">Number of Claimable Bunnies (1-{currentUseState.whiteListPass.q}):</label>
+                              <label className="connected">Number of Claimable Kreamers (1-{currentUseState.whiteListPass.q}):</label>
                               <div className="">
                                 <div className="input-group">
                                   <div className="input-group-prepend">
