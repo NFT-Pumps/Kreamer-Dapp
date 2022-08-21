@@ -142,14 +142,14 @@ export default function Claim() {
                         <>
                           {(currentUseState.isWaiting == false) ?
                             <>
-                              <label className="connected">Number of Claimable Kreamers (1-{currentUseState.whiteListPass.q}):</label>
+                              <label className="connected">Number of Claimable Farm Folk (1-{currentUseState.whiteListPass.q}):</label>
                               <div className="">
                                 <div className="input-group">
                                   <div className="input-group-prepend">
                                     <button className="btn btn-outline-primary" type="button" onClick={decNum}>-</button>
                                   </div>
                                   <div className="input-group-prepend">
-                                    <input type="number" id="mints" name="mints" className="form-control" value={mintNum} min="1" max={currentUseState.whiteListPass.q} onChange={handleChange} />
+                                    <input type="number" id="mints" name="mints" className="form-control" value={mintNum} min="0" max={currentUseState.whiteListPass.q} onChange={handleChange} />
                                   </div>
                                   <div className="input-group-prepend">
                                     <button className="btn btn-outline-primary" type="button" onClick={incNum}>+</button>
