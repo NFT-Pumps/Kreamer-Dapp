@@ -7,7 +7,7 @@ module.exports = {
     siteTitle: "The Kreamer Collection DAPP",
     contractAddress: "0xC81e9A17a5BAEE1141BA2AC7EEFDbe8f450b60e8",
     infuraID: "045e9c65387a4200aa8559c347fa19a4",
-    defaultGas: 125000,//75000,
+    defaultGas: 225000,//75000,
     mintType : "Pre-Sale", //Pre-Sale Public
     enableBogo : false,
     enforceWhitelist : true,
