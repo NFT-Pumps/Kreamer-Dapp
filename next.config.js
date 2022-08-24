@@ -16,7 +16,7 @@ module.exports = {
     network: 'mainnet',
     chainId: 1,
     pageHeader : 'The Kreamer Collection',
-    pageText : 'Mint and collect the Rootinest, Tootinest NFT ever.',
+    pageText : '3100 of Flavors',
     //mintType: "Whitelist",
     blockExplorerURL: 'https://.etherscan.io/',
     www: 'https://www.thekreamercollection.com',
