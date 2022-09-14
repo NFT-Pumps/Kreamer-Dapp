@@ -56,11 +56,11 @@ const MintPage = () => {
     // setNum(0)
   }
 
-  async function BogoMint(props) {
+  async function Mint(props) {
 
     props.mintType = "Public";
-    if (mintNum > 0 && process.env.enableBogo == true)  {
-      const returnedhash = await walletBridge1.bogoMint(props);
+    if (mintNum > 0 && process.env.enable == true)  {
+      const returnedhash = await walletBridge1.Mint(props);
     }
     // setNum(0)
   }
@@ -125,7 +125,7 @@ const MintPage = () => {
               </Col> :
               <Col lg="6" md="6" className="align-self-center">
                 <>
-                  {(currentUseState.isPublicMintIsOpen || currentUseState.isBogoMintIsOpen) ?
+                  {(currentUseState.isPublicMintIsOpen || currentUseState.isMintIsOpen) ?
                     <>
                       <br />
                       <p className="connected" style={{ backgroundColor: "RGB(0,0,0,0.5)", padding: "5px" }}>
@@ -152,7 +152,7 @@ const MintPage = () => {
                           </div>
                         </div>
                       </div>
-                      {(process.env.enableBogo == false) ?
+                      {(process.env.enable == false) ?
                         <>
                           <Link href="">
                             <a className="btn btn-success m-r-20 btn-md m-t-30 btn-outline-dark " onClick={() => SendMint({ mint: mintNum })}>
@@ -161,8 +161,8 @@ const MintPage = () => {
                           </Link>
                         </>
                         : <Link href="">
-                        <a className="btn btn-success m-r-20 btn-md m-t-30 btn-outline-dark " onClick={() => BogoMint({ mint: mintNum })}>
-                          Bogo Mint
+                        <a className="btn btn-success m-r-20 btn-md m-t-30 btn-outline-dark " onClick={() => Mint({ mint: mintNum })}>
+                           Mint
                         </a>
                       </Link>}
                       <a

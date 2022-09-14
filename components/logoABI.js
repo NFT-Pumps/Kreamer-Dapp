@@ -329,7 +329,7 @@ export default function ContractABI() {
             "type":"uint256"
          }
       ],
-      "name":"bogoMint",
+      "name":"Mint",
       "outputs":[
          
       ],
@@ -340,7 +340,7 @@ export default function ContractABI() {
       "inputs":[
          
       ],
-      "name":"bogoMintIsOpen",
+      "name":"MintIsOpen",
       "outputs":[
          {
             "internalType":"bool",
@@ -840,7 +840,7 @@ export default function ContractABI() {
          },
          {
             "internalType":"bool",
-            "name":"setBogoMintState",
+            "name":"setMintState",
             "type":"bool"
          }
       ],
@@ -1018,7 +1018,7 @@ export default function ContractABI() {
       "inputs":[
          
       ],
-      "name":"toggleBogoMint",
+      "name":"toggleMint",
       "outputs":[
          
       ],
