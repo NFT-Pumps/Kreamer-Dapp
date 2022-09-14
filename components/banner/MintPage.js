@@ -56,15 +56,6 @@ const MintPage = () => {
     // setNum(0)
   }
 
-  async function Mint(props) {
-
-    props.mintType = "Public";
-    if (mintNum > 0 && process.env.enable == true)  {
-      const returnedhash = await walletBridge1.Mint(props);
-    }
-    // setNum(0)
-  }
-
   const [formInput, updateFormInput] = useState({
     price: "",
     amount: "1",
@@ -95,7 +86,6 @@ const MintPage = () => {
   }
 
   let newValue = dappParams.mintType == "Public" ? process.env.ethValue : process.env.ethWLValue;
-
   return (
     <>
       <div className="static-slider-head banner2">
